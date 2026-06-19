@@ -155,7 +155,7 @@
                         <div class="p-6 cursor-pointer flex justify-between items-center" onclick="toggleAccordion(this)">
                             <div>
                                 <h3 class="font-bold text-xl text-black mb-1">맞통풍 구조 시뮬레이션 및 실증 반전 현상</h3>
-                                <p class="text-xs text-zinc-500">이곳을 클릭(터치)하면 시뮬레이션 데이터와 실측 반전 결과가 나타납니다.</p>
+                                <p class="text-xs text-zinc-500">이곳을 클릭(터치)하면 시뮬레이션 데이터와 실측 반전 결과가 나타남.</p>
                             </div>
                             <div class="text-zinc-400">
                                 <svg class="arrow-icon w-6 h-6 transform transition-transform duration-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
@@ -166,11 +166,11 @@
                             <div class="p-6 border-t border-zinc-200 space-y-8">
                                 <div>
                                     <p class="text-zinc-600 text-sm sm:text-base leading-relaxed break-keep mb-5">
-                                        Dead zone 환기 개선을 위해 <strong>맞통풍(Cross Ventilation)</strong> 유도를 목표로 세 가지 구조 조합(Combo)을 설계하여 시뮬레이션과 실제 모형 측정을 교차 검증하였습니다.
+                                        Dead zone 환기 개선을 위해 <strong>맞통풍(Cross Ventilation)</strong> 유도를 목표로 세 가지 구조 조합(Combo)을 설계하여 시뮬레이션과 실제 모형 측정을 교차 검증함
                                     </p>
                                     <ul class="list-disc pl-5 space-y-3 text-sm sm:text-base text-zinc-700 break-keep mb-8">
-                                        <li><strong class="text-black">시뮬레이션 결과:</strong> 27° 벽과 창문을 동시 개방한 <span class="font-bold text-blue-600">Combo 1</span>이 최고 농도 1,770ppm으로 가장 우수한 환기 성능을 보였습니다. 21° 유도벽을 설치한 구조(Combo 2, 3)는 오히려 배출 경로를 차단하는 것으로 계산되었습니다.</li>
-                                        <li><strong class="text-rose-600">실증 테스트의 반전:</strong> 그러나 실제 모형 측정 결과, 시뮬레이션과는 정반대로 <span class="font-bold text-rose-600">Combo 3(맞통풍+유도벽)</span>이 882ppm으로 가장 빠른 환기 속도를 기록했습니다. 이는 실제 환경의 복잡한 난류가 유도벽을 만났을 때 더 효율적인 압력차를 형성함을 시사합니다.</li>
+                                        <li><strong class="text-black">시뮬레이션 결과:</strong> 27° 벽과 창문을 동시 개방한 <span class="font-bold text-blue-600">Combo 1</span>이 최고 농도 1,770ppm으로 가장 우수한 환기 성능을 보였음. 21° 유도벽을 설치한 구조(Combo 2, 3)는 오히려 배출 경로를 차단하는 것으로 계산됨.</li>
+                                        <li><strong class="text-rose-600">실증 테스트의 반전:</strong> 그러나 실제 모형 측정 결과, 시뮬레이션과는 정반대로 <span class="font-bold text-rose-600">Combo 3(맞통풍+유도벽)</span>이 882ppm으로 가장 빠른 환기 속도를 기록함. 이는 실제 환경의 복잡한 난류가 유도벽을 만났을 때 더 효율적인 압력차를 형성함을 시사함.</li>
                                     </ul>
                                 </div>
                                 
@@ -814,10 +814,10 @@
         }
         // QSI Calculator Logic
         const qsi_db = {
-            "1": { bacteria: "Staphylococcus", qsi: "Hamamelitannin", principle: "세균의 Agr 표적 시스템을 하향 조절하여, 땀 속 노폐물을 쉰내 물질로 전환하는 유전자 발현 신호 체계를 차단합니다." },
-            "2": { bacteria: "Corynebacterium", qsi: "Farnesol + Carvacrol", principle: "아포크린샘 피지 분해 효소 활성 신호를 교란하여, 액취증 유발 물질 생성을 근본적으로 봉쇄합니다." },
-            "3": { bacteria: "Micrococcus luteus", qsi: "Quercetin", principle: "휴면 상태의 균을 깨우는 RPF(휴면 타파 인자) 수용체를 억제하여 특유의 노란 색소 합성을 억제합니다." },
-            "4": { bacteria: "Pseudomonas aeruginosa", qsi: "Epigallocatechin Gallate (EGCG)", principle: "EGCG의 수산화기(-OH)가 LasR 수용체와 결합하여 입체 장애(Steric Hindrance)를 유발, 바이오필름을 억제합니다." }
+            "1": { bacteria: "포도상구균(Staphylococcus)", qsi: "하마멜리탄닌 (Hamamelitannin)", principle: "세균의 Agr 표적 시스템을 하향 조절하여, 땀 속 노폐물을 쉰내 물질로 전환하는 유전자 발현 신호 체계를 차단합니다." },
+            "2": { bacteria: "코리네박테리움 (Corynebacterium)", qsi: "파네솔(Farnesol) + 카바크롤(Carvacrol)", principle: "아포크린샘 피지 분해 효소 활성 신호를 교란하여, 액취증 유발 물질 생성을 근본적으로 봉쇄합니다." },
+            "3": { bacteria: "미크로코쿠스 (Micrococcus luteus)", qsi: "퀘르세틴 (Quercetin)", principle: "휴면 상태의 균을 깨우는 RPF(휴면 타파 인자) 수용체를 억제하여 특유의 노란 색소 합성을 억제합니다." },
+            "4": { bacteria: "슈도모나스균 (Pseudomonas aeruginosa)", qsi: "녹차 추출 EGCG (Epigallocatechin Gallate)", principle: "EGCG의 수산화기(-OH)가 LasR 수용체와 결합하여 입체 장애(Steric Hindrance)를 유발, 바이오필름을 억제합니다." }
         };
 
         function calculateFormula() {
