@@ -142,7 +142,115 @@
                     </p>
                 </div>
             </div>
-        </section>
+
+            <div class="mt-16 group relative border border-zinc-200 rounded-xl overflow-hidden bg-white shadow-sm transition-all duration-500 hover:shadow-md">
+                <div class="p-5 sm:p-7 flex justify-between items-center bg-zinc-50 cursor-pointer group-hover:bg-zinc-100 transition-colors">
+                    <div>
+                        <h3 class="text-base sm:text-lg font-extrabold text-zinc-900 tracking-tight flex items-center gap-2">
+                            <span class="inline-block w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
+                            Z6 데드존 완화를 위한 맞통풍 시뮬레이션 및 실증 분석
+                        </h3>
+                        <p class="text-[11px] sm:text-xs text-zinc-500 mt-1.5 font-medium">마우스를 올리거나 터치하여 상세 데이터를 확인하세요.</p>
+                    </div>
+                    <div class="text-zinc-400 group-hover:text-black transition-colors shrink-0 ml-4">
+                        <svg class="w-6 h-6 transform group-hover:rotate-180 transition-transform duration-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </div>
+                </div>
+            
+                <div class="max-h-0 opacity-0 group-hover:max-h-[5000px] group-hover:opacity-100 transition-all duration-700 ease-in-out">
+                    <div class="p-5 sm:p-8 border-t border-zinc-200 space-y-8 bg-white">
+                        
+                        <div class="text-[13px] sm:text-sm text-zinc-700 leading-relaxed break-keep">
+                            <p>자연환기에서 가장 효과적이라고 알려진 전략 중 본교의 급식실에 적용할 수 있는 구조에는 <strong>맞통풍</strong>이 있습니다. 맞통풍은 공간의 양쪽에 개구부를 배치해 압력차로 공간을 가로지르는 기류를 형성하는 방식으로, 단면환기나 연돌효과 등 다른 전략도 고려되었으나 본 연구의 Dead zone은 오염원과 출구가 한쪽에 치우쳐 두 전략을 적용하기에 불리한 구조입니다. 따라서 맞통풍 유도를 목표로 세 가지 구조 조합에 대한 시뮬레이션을 실행하였습니다.</p>
+                        </div>
+            
+                        <div class="overflow-x-auto border border-zinc-200 rounded-lg">
+                            <table class="w-full text-left text-sm border-collapse min-w-[500px]">
+                                <thead class="bg-zinc-50 text-[11px] sm:text-xs uppercase tracking-wider text-zinc-600 font-bold border-b border-zinc-200">
+                                    <tr>
+                                        <th class="p-3 sm:p-4 text-center border-r border-zinc-200 w-1/4">구조 조합</th>
+                                        <th class="p-3 sm:p-4 text-right border-r border-zinc-200">최고농도 (ppm)</th>
+                                        <th class="p-3 sm:p-4 text-right">누적노출</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-zinc-200 bg-white">
+                                    <tr>
+                                        <td class="p-3 sm:p-4 text-center font-bold text-zinc-500 border-r border-zinc-200 bg-zinc-50">기존 구조 (Base)</td>
+                                        <td class="p-3 sm:p-4 text-right font-mono">3,168</td>
+                                        <td class="p-3 sm:p-4 text-right font-mono">385,288</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-3 sm:p-4 text-center font-bold text-blue-600 border-r border-zinc-200 bg-blue-50/30">Combo 1</td>
+                                        <td class="p-3 sm:p-4 text-right font-mono font-bold text-blue-600 bg-blue-50/30">1,770</td>
+                                        <td class="p-3 sm:p-4 text-right font-mono font-bold text-blue-600 bg-blue-50/30">300,827</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-3 sm:p-4 text-center font-bold text-zinc-700 border-r border-zinc-200">Combo 2</td>
+                                        <td class="p-3 sm:p-4 text-right font-mono">1,901</td>
+                                        <td class="p-3 sm:p-4 text-right font-mono">331,549</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-3 sm:p-4 text-center font-bold text-zinc-700 border-r border-zinc-200">Combo 3</td>
+                                        <td class="p-3 sm:p-4 text-right font-mono">1,873</td>
+                                        <td class="p-3 sm:p-4 text-right font-mono">331,201</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+            
+                        <div class="space-y-5">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                                <div class="bg-zinc-50 border border-zinc-100 rounded-lg p-3 text-center">
+                                    <p class="text-xs font-bold text-zinc-500 mb-2 uppercase tracking-wider">[왼쪽] Combo 1</p>
+                                    <img src="스크린샷 2026-06-19 112747.png" class="w-full h-auto object-contain rounded zoomable-img bg-white" onclick="openModal(this.src)">
+                                </div>
+                                <div class="bg-zinc-50 border border-zinc-100 rounded-lg p-3 text-center">
+                                    <p class="text-xs font-bold text-zinc-500 mb-2 uppercase tracking-wider">[오른쪽] Combo 2</p>
+                                    <img src="스크린샷 2026-06-19 112851.png" class="w-full h-auto object-contain rounded zoomable-img bg-white" onclick="openModal(this.src)">
+                                </div>
+                                <div class="bg-zinc-50 border border-zinc-100 rounded-lg p-3 text-center sm:col-span-2 lg:col-span-1">
+                                    <p class="text-xs font-bold text-zinc-500 mb-2 uppercase tracking-wider">Combo 3</p>
+                                    <img src="스크린샷 2026-06-19 112914.png" class="w-full h-auto object-contain rounded zoomable-img bg-white" onclick="openModal(this.src)">
+                                </div>
+                            </div>
+                            
+                            <ul class="list-disc pl-5 space-y-2 text-[13px] sm:text-sm text-zinc-700 leading-relaxed break-keep">
+                                <li><strong>Combo 1:</strong> 27° 기준선의 벽과 창문을 동시에 개방하여, 공기가 한쪽에서 들어와 반대쪽으로 빠져나가도록 유도하는 구조.</li>
+                                <li><strong>Combo 2:</strong> 27° 기준선의 벽을 개방하되 창문은 닫는 대신, 21° 안쪽에 유도벽을 세워 기류를 바깥쪽 경로로 유도하고자 한 구조.</li>
+                                <li><strong>Combo 3:</strong> Combo 1과 2를 결합한 것으로, 창문과 27° 벽을 모두 개방하며 21° 유도벽을 추가한 구조.</li>
+                            </ul>
+
+                            <div class="p-4 bg-blue-50 border-l-4 border-blue-500 rounded-r-lg mt-4">
+                                <p class="text-sm text-blue-900 font-medium break-keep">
+                                    <strong class="block mb-1">🖥️ 시뮬레이션 결과 결론</strong>
+                                    세 조합 모두 기존의 구조에 비해 Z6 구역의 CO 최고농도를 낮추었으나, 맞통풍만을 구현한 <strong>Combo 1</strong>이 가장 우수한 환기 성능을 보였습니다. 반면 유도벽을 설치한 Combo 2와 3은 21° 유도벽이 Dead Zone의 안쪽 배출 경로를 차단하여 맞통풍으로 얻은 이점을 일부 상쇄시켰습니다. 따라서 인위적으로 유도벽을 추가하는 것보다 <strong>막힌 출구를 개방해 외부와 직접 연결되는 경로를 확보</strong>하는 것이 가장 효과적임이 시뮬레이션을 통해 도출되었습니다.
+                                </p>
+                            </div>
+                        </div>
+            
+                        <div class="pt-8 border-t-2 border-dashed border-zinc-200">
+                            <div class="inline-block px-3 py-1 bg-rose-100 text-rose-700 text-[11px] font-bold tracking-widest uppercase rounded mb-3">Reversal Phenomenon</div>
+                            <h4 class="font-bold text-xl text-black tracking-tight mb-5">실증 모형 테스트: 시뮬레이션 결과의 뒤바뀜</h4>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+                                <div class="space-y-4 text-[13px] sm:text-sm text-zinc-700 leading-relaxed break-keep">
+                                    <p>그러나 이후 마지막 단계에서 세 가지 구조를 모형을 통해 재현해 <strong>실제 CO 농도 변화 양상</strong>을 측정하고 기류 시각화 데이터를 얻은 결과, <strong>시뮬레이션과는 정반대의 결과</strong>가 나타났습니다.</p>
+                                    
+                                    <p>실측 값에서는 <strong>유도벽과 맞통풍을 모두 적용한 Combo 3이 가장 우수한 환기 성능</strong>을 보였으며, Combo 1이 그 다음, 유도벽만 적용한 Combo 2가 가장 낮은 성능을 보였습니다. 이는 우열이 <span class="font-bold text-blue-600">Combo 1 > 3 > 2</span>로 나타났던 시뮬레이션 결과가 <span class="font-bold text-rose-600">Combo 3 > 1 > 2</span>로 뒤바뀐 것입니다.</p>
+                                    
+                                    <p>1분 30초 노출 직후의 최고 농도는 세 조합 모두 유사하게 형성되었으나, 이후 감소 속도에서 뚜렷한 차이가 났습니다. <strong>Combo 3</strong>은 882ppm까지만 상승한 뒤 <strong>가장 빠르게 감소하여 372초 만에 초기 농도의 10% 수준</strong>으로 떨어졌습니다. 반면 Combo 1은 957ppm에서 425초, Combo 2는 1,028ppm에서 513초가 소요되었습니다. 즉, 실제 환경에서는 <strong>Combo 3이 가장 낮은 최고 농도와 가장 짧은 환기 시간</strong>을 달성함을 확인하였습니다.</p>
+                                </div>
+                                <div class="bg-zinc-50 border border-zinc-200 rounded-xl p-4 text-center h-full flex flex-col justify-center shadow-inner">
+                                    <p class="text-xs font-bold text-zinc-500 mb-3 uppercase tracking-wider">실제 모형 CO₂ 농도 실측 데이터</p>
+                                    <img src="스크린샷 2026-06-19 112931.png" class="w-full h-auto object-contain rounded zoomable-img mix-blend-multiply" onclick="openModal(this.src)">
+                                </div>
+                            </div>
+                        </div>
+            
+                    </div>
+                </div>
+            </div>
+            </section>
 
         <section class="research-section reveal">
             <div class="section-number">02. Material Chemistry</div>
@@ -301,7 +409,7 @@
     <main id="tab-deodorant" class="tab-content max-w-3xl mx-auto px-4 sm:px-6 py-24">
         <div class="space-y-2 mb-10 text-center">
             <h2 class="text-2xl font-extrabold tracking-tight text-zinc-900 uppercase">맞춤형 QSI 솔루션</h2>
-            <p class="text-zinc-500 text-sm font-medium">취기 분자 및 미생물 대사량에 따른 개인 맞춤형 탈취 포뮬러 계산기</p>
+            <p class="text-zinc-500 text-sm font-medium">취기 분자 및 미생물 대사량에 따른 정밀 소취 배합비 산출</p>
         </div>
 
         <div class="bg-white border border-zinc-200 rounded-xl p-6 sm:p-8 space-y-6 shadow-sm">
@@ -440,7 +548,6 @@
             modalImg.src = src;
             modal.classList.remove('hidden');
             
-            // Trigger reflow to apply transition
             void modal.offsetWidth; 
             
             modal.classList.add('opacity-100');
@@ -461,7 +568,7 @@
         }
 
         // ---------------------------------------------------------
-        // HAFS Menu Database (Integrated Dinner & Snacks)
+        // HAFS Menu Database & Recommendation Logic
         // ---------------------------------------------------------
         const hafsMenuDB = {
             "0601": { dateLabel: "6월 1일 (월)", breakfast: "쌀밥, 맑은오징어국, 돈사태묵은지찜, 마늘햄구이, 건세멸치조림, 석박지", lunch: "수제치킨마요덮밥, 미역장국, 치즈스테이크볼꼬지, 쫄뱅이, 단무지무침, 포기김치", dinner: "설렁탕, 쌀밥/ 잡곡밥, 돈육김치볶음, 온두부, 메추리알곤약조림, 콩나물무침, 깍두기", snack: "탱글뽀득감자핫도그, 엔요" },
@@ -488,27 +595,21 @@
             "0630": { dateLabel: "6월 30일 (화)", breakfast: "쌀밥, 돼지국밥, 수제완자전, 고추참치볶음, 치커리생채, 포기김치", lunch: "쌀밥, 근대고추장국, 파닭, 마파두부조림, 감자채볶음, 실곤약냉채, 포기김치", dinner: "김치말이국수, 쌀밥, 불고기, 청포묵무침, 아몬드멸치볶음, 무말랭이무침, 열무김치", snack: "찹쌀도넛, 매실주스" }
         };
 
-        // 지용성 강도에 따른 키워드 분류
         const criticalKeywords = ['튀김', '돈가스', '돈까스', '강정', '치킨', '카츠', '까스', '폭립', '백립', '핫도그', '너겟', '크로켓', '삼겹살', '마요'];
         const cautionKeywords = ['볶음', '구이', '스테이크', '갈비', '고기', '바베큐', '떡갈비', '불고기', '만두', '탕수육', '꿔바로우', '스팸', '전', '부침', '설렁탕'];
 
-        // ---------------------------------------------------------
-        // Recommendation Logic (지용성 3단계 진단)
-        // ---------------------------------------------------------
         function diagnoseMenu() {
             const dateId = document.getElementById('dateSelect').value;
             const meal = document.getElementById('mealSelect').value;
-            
             const selectedDayData = hafsMenuDB[dateId];
             let currentMenu = selectedDayData[meal];
             const dateLabel = selectedDayData.dateLabel;
             const mealLabel = meal === 'breakfast' ? '조식' : meal === 'lunch' ? '중식' : '석식';
-
             const container = document.getElementById('menuResultContainer');
             const content = document.getElementById('menuResultContent');
             const badge = document.getElementById('menuResultBadge');
+            
             container.classList.remove('hidden');
-
             let menuDisplayHtml = `<p class="font-extrabold text-black text-lg break-keep">${currentMenu}</p>`;
             let fullSearchText = currentMenu;
 
@@ -519,91 +620,25 @@
 
             let riskLevel = 0; 
             let detectedWords = [];
-
-            // 1차 검사: 초고위험 메뉴
-            criticalKeywords.forEach(k => { 
-                if(fullSearchText.includes(k)) { riskLevel = 2; detectedWords.push(k); } 
-            });
-
-            // 2차 검사: 일반 위험 메뉴 (초고위험이 아닐 때만)
-            if(riskLevel === 0) {
-                cautionKeywords.forEach(k => { 
-                    if(fullSearchText.includes(k)) { riskLevel = 1; detectedWords.push(k); } 
-                });
-            }
+            criticalKeywords.forEach(k => { if(fullSearchText.includes(k)) { riskLevel = 2; detectedWords.push(k); } });
+            if(riskLevel === 0) { cautionKeywords.forEach(k => { if(fullSearchText.includes(k)) { riskLevel = 1; detectedWords.push(k); } }); }
 
             const finalHeaderHtml = `<div class="p-5 border border-zinc-200 rounded-lg bg-zinc-50 mb-6"><p class="font-bold text-xs text-zinc-400 mb-1 tracking-wider uppercase">Analysis Target: ${dateLabel} / ${mealLabel}</p>${menuDisplayHtml}</div>`;
 
             if (riskLevel === 2) {
                 badge.innerHTML = `<span class="bg-black text-white px-2 py-1 font-mono font-bold rounded text-[10px] animate-pulse">CRITICAL RISK</span>`;
-                content.innerHTML = `
-                    ${finalHeaderHtml}
-                    <p class="text-black font-extrabold border-l-4 border-black pl-3 mb-5">고농도 지용성 메뉴(<span class="text-zinc-500">${detectedWords.join(', ')}</span>) 감지. 섬유 고착화 극위험.</p>
-                    
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-6">
-                        <div class="p-4 border border-rose-200 bg-rose-50 rounded-lg">
-                            <p class="text-[10px] font-bold text-rose-600 uppercase tracking-widest mb-1">Strict Prohibition</p>
-                            <p class="font-bold text-rose-900 text-[13px] break-keep">체육복 / 아우터 절대 착용 금지</p>
-                            <p class="text-xs text-rose-700 mt-2 break-keep">해당 메뉴 비산 시 폴리에스터(100%) 섬유의 소수성 인력에 의해 잔류 취기가 강력하게 고착됩니다. 식사 전 반드시 탈의하십시오.</p>
-                        </div>
-                        <div class="p-4 border border-emerald-200 bg-emerald-50 rounded-lg">
-                            <p class="text-[10px] font-bold text-emerald-600 uppercase tracking-widest mb-1">Recommendation</p>
-                            <p class="font-bold text-emerald-900 text-[13px] break-keep">교복 셔츠 단독 착용</p>
-                            <p class="text-xs text-emerald-700 mt-2 break-keep">그나마 친수성(Rayon 25%)을 띠는 셔츠가 반데르발스 인력 형성을 최소화합니다.</p>
-                        </div>
-                    </div>
-
-                    <div class="p-5 bg-zinc-900 rounded-xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-                        <div>
-                            <p class="font-bold text-white text-sm">공간 경고: Z6 구역 (Dead Zone) 절대 접근 금지</p>
-                            <p class="text-xs text-zinc-400 mt-1.5 break-keep">다량의 유분 분자가 기류 단락 구역에 정체되어 심각한 악취 오염을 유발합니다.</p>
-                        </div>
-                        <button onclick="scrollToSection1()" class="px-4 py-3 bg-white text-black font-bold text-[10px] uppercase tracking-widest rounded-lg hover:bg-zinc-200 transition-colors whitespace-nowrap">View Z6 Map →</button>
-                    </div>
-                `;
+                content.innerHTML = `${finalHeaderHtml}<p class="text-black font-extrabold border-l-4 border-black pl-3 mb-5">고농도 지용성 메뉴(<span class="text-zinc-500">${detectedWords.join(', ')}</span>) 감지. 섬유 고착화 극위험.</p><div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-6"><div class="p-4 border border-rose-200 bg-rose-50 rounded-lg"><p class="text-[10px] font-bold text-rose-600 uppercase tracking-widest mb-1">Strict Prohibition</p><p class="font-bold text-rose-900 text-[13px] break-keep">체육복 / 아우터 절대 착용 금지</p><p class="text-xs text-rose-700 mt-2 break-keep">해당 메뉴 비산 시 폴리에스터(100%) 섬유의 소수성 인력에 의해 잔류 취기가 강력하게 고착됩니다. 식사 전 반드시 탈의하십시오.</p></div><div class="p-4 border border-emerald-200 bg-emerald-50 rounded-lg"><p class="text-[10px] font-bold text-emerald-600 uppercase tracking-widest mb-1">Recommendation</p><p class="font-bold text-emerald-900 text-[13px] break-keep">교복 셔츠 단독 착용</p><p class="text-xs text-emerald-700 mt-2 break-keep">그나마 친수성(Rayon 25%)을 띠는 셔츠가 반데르발스 인력 형성을 최소화합니다.</p></div></div><div class="p-5 bg-zinc-900 rounded-xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4"><div><p class="font-bold text-white text-sm">⚠️ 공간 경고: Z6 구역 (Dead Zone) 절대 접근 금지</p><p class="text-xs text-zinc-400 mt-1.5 break-keep">다량의 유분 분자가 기류 단락 구역에 정체되어 심각한 악취 오염을 유발합니다.</p></div><button onclick="scrollToSection1()" class="px-4 py-3 bg-white text-black font-bold text-[10px] uppercase tracking-widest rounded-lg hover:bg-zinc-200 transition-colors whitespace-nowrap">View Z6 Map →</button></div>`;
             } else if (riskLevel === 1) {
                 badge.innerHTML = `<span class="bg-amber-100 text-amber-900 border border-amber-300 px-2 py-1 font-mono font-bold rounded text-[10px]">CAUTION</span>`;
-                content.innerHTML = `
-                    ${finalHeaderHtml}
-                    <p class="text-black font-extrabold border-l-4 border-amber-400 pl-3 mb-5">일반 지용성 메뉴(<span class="text-zinc-500">${detectedWords.join(', ')}</span>) 감지. 부분적 섬유 흡착 주의.</p>
-                    
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-6">
-                        <div class="p-4 border border-zinc-200 bg-white rounded-lg">
-                            <p class="text-[10px] font-bold text-zinc-500 uppercase tracking-widest mb-1">Caution</p>
-                            <p class="font-bold text-zinc-900 text-[13px] break-keep">교복 자켓 및 가디건 주의</p>
-                            <p class="text-xs text-zinc-600 mt-2 break-keep">울(Wool)이 섞인 다공성 구조이므로 구이나 볶음 등 일반 악취가 오래 머물 수 있습니다.</p>
-                        </div>
-                        <div class="p-4 border border-emerald-200 bg-emerald-50 rounded-lg">
-                            <p class="text-[10px] font-bold text-emerald-600 uppercase tracking-widest mb-1">Recommendation</p>
-                            <p class="font-bold text-emerald-900 text-[13px] break-keep">교복 셔츠 위주 착용</p>
-                            <p class="text-xs text-emerald-700 mt-2 break-keep">체육복 착용 시 냄새가 약간 밸 수 있으나 심각한 수준은 아니며, 가급적 셔츠를 권장합니다.</p>
-                        </div>
-                    </div>
-
-                    <div class="p-4 border border-amber-200 bg-amber-50 rounded-xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-                        <div>
-                            <p class="font-bold text-amber-900 text-sm">Z6 구역 (Dead Zone) 착석 자제</p>
-                            <p class="text-xs text-amber-700 mt-1 break-keep">장시간 착석 시 옷에 잔류취가 흡착될 확률이 높아집니다.</p>
-                        </div>
-                        <button onclick="scrollToSection1()" class="px-4 py-2 bg-amber-200 text-amber-900 font-bold text-[10px] uppercase tracking-widest rounded hover:bg-amber-300 transition-colors whitespace-nowrap">View Z6 Map →</button>
-                    </div>
-                `;
+                content.innerHTML = `${finalHeaderHtml}<p class="text-black font-extrabold border-l-4 border-amber-400 pl-3 mb-5">일반 지용성 메뉴(<span class="text-zinc-500">${detectedWords.join(', ')}</span>) 감지. 부분적 섬유 흡착 주의.</p><div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-6"><div class="p-4 border border-zinc-200 bg-white rounded-lg"><p class="text-[10px] font-bold text-zinc-500 uppercase tracking-widest mb-1">Caution</p><p class="font-bold text-zinc-900 text-[13px] break-keep">교복 자켓 및 가디건 주의</p><p class="text-xs text-zinc-600 mt-2 break-keep">울(Wool)이 섞인 다공성 구조이므로 구이나 볶음 등 일반 악취가 오래 머물 수 있습니다.</p></div><div class="p-4 border border-emerald-200 bg-emerald-50 rounded-lg"><p class="text-[10px] font-bold text-emerald-600 uppercase tracking-widest mb-1">Recommendation</p><p class="font-bold text-emerald-900 text-[13px] break-keep">교복 셔츠 위주 착용</p><p class="text-xs text-emerald-700 mt-2 break-keep">체육복 착용 시 냄새가 약간 밸 수 있으나 심각한 수준은 아니며, 가급적 셔츠를 권장합니다.</p></div></div><div class="p-4 border border-amber-200 bg-amber-50 rounded-xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4"><div><p class="font-bold text-amber-900 text-sm">⚠️ Z6 구역 (Dead Zone) 착석 자제</p><p class="text-xs text-amber-700 mt-1 break-keep">장시간 착석 시 옷에 잔류취가 흡착될 확률이 높아집니다.</p></div><button onclick="scrollToSection1()" class="px-4 py-2 bg-amber-200 text-amber-900 font-bold text-[10px] uppercase tracking-widest rounded hover:bg-amber-300 transition-colors whitespace-nowrap">View Z6 Map →</button></div>`;
             } else {
                 badge.innerHTML = `<span class="bg-zinc-100 text-zinc-800 px-2 py-1 font-mono font-bold rounded text-[10px]">SAFE</span>`;
-                content.innerHTML = `
-                    ${finalHeaderHtml}
-                    <div class="p-5 bg-emerald-50 border border-emerald-200 rounded-xl">
-                        <p class="font-bold text-emerald-900 mb-1">쾌적한 상태 유지 가능</p>
-                        <p class="text-sm text-emerald-800 break-keep">해당 식단은 수용성 메뉴 위주로 구성되어 있어 소수성 섬유(폴리에스터)와의 고착화 위험이 낮습니다. 체육복을 포함한 모든 종류의 의류를 편하게 착용하셔도 무방합니다.</p>
-                    </div>
-                `;
+                content.innerHTML = `${finalHeaderHtml}<div class="p-5 bg-emerald-50 border border-emerald-200 rounded-xl"><p class="font-bold text-emerald-900 mb-1">✔️ 쾌적한 상태 유지 가능</p><p class="text-sm text-emerald-800 break-keep">해당 식단은 수용성 메뉴 위주로 구성되어 있어 소수성 섬유(폴리에스터)와의 고착화 위험이 낮습니다. 체육복을 포함한 모든 종류의 의류를 편하게 착용하셔도 무방합니다.</p></div>`;
             }
             setTimeout(() => { container.scrollIntoView({ behavior: 'smooth', block: 'nearest' }); }, 100);
         }
 
-        // ---------------------------------------------------------
         // QSI Calculator Logic
-        // ---------------------------------------------------------
         const qsi_db = {
             "1": { bacteria: "Staphylococcus", qsi: "Hamamelitannin", principle: "세균의 Agr 표적 시스템을 하향 조절하여, 땀 속 노폐물을 쉰내 물질로 전환하는 유전자 발현 신호 체계를 차단합니다." },
             "2": { bacteria: "Corynebacterium", qsi: "Farnesol + Carvacrol", principle: "아포크린샘 피지 분해 효소 활성 신호를 교란하여, 액취증 유발 물질 생성을 근본적으로 봉쇄합니다." },
