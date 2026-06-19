@@ -39,6 +39,11 @@
         .zoomable-img { cursor: zoom-in; transition: opacity 0.2s, transform 0.2s; }
         .zoomable-img:hover { opacity: 0.8; transform: scale(1.02); }
 
+        /* Tables */
+        table { width: 100%; text-align: left; font-size: 14px; }
+        th, td { padding: 12px 16px; border-bottom: 1px solid #e5e5e5; }
+        th { font-weight: 700; color: #666; text-transform: uppercase; font-size: 12px; background: #fafafa; }
+
         @media (max-width: 768px) {
             .research-section { padding: 80px 0; }
             .section-title { font-size: 1.8rem; margin-bottom: 40px; }
@@ -142,76 +147,67 @@
                 </div>
             </div>
 
-            <div class="mt-16 group relative bg-zinc-50 border border-zinc-200 rounded-xl overflow-hidden transition-all duration-500 hover:bg-white hover:shadow-lg">
-                <div class="p-6 cursor-pointer flex justify-between items-center">
+            <div class="grid-row border-t-2 border-black pt-12 pb-0 mb-0 mt-16">
+                <div class="grid-label text-blue-600">Deep Analysis</div>
+                <div class="grid-content space-y-8">
                     <div>
-                        <h3 class="font-bold text-lg text-black">Z6 데드존 완화를 위한 시뮬레이션 및 실증 분석</h3>
-                        <p class="text-xs text-zinc-500 mt-1">이곳에 마우스를 올리면 상세 데이터가 펼쳐집니다.</p>
-                    </div>
-                    <div class="text-zinc-400 group-hover:text-black transition-colors">
-                        <svg class="w-6 h-6 transform group-hover:rotate-180 transition-transform duration-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                    </div>
-                </div>
-                
-                <div class="max-h-0 opacity-0 group-hover:max-h-[3000px] group-hover:opacity-100 transition-all duration-700 ease-in-out">
-                    <div class="p-6 border-t border-zinc-200 space-y-8">
-                        <p class="text-sm text-zinc-700 leading-relaxed break-keep">
-                            자연환기에서 가장 효과적이라고 알려진 전략 중 본교의 급식실에 적용할 수 있는 구조에는 <strong>맞통풍</strong>이 있습니다. 단면환기나 연돌효과 등 다른 전략도 있었으나 본 연구의 Dead zone은 오염원과 출구가 한쪽에 치우쳐 불리한 구조입니다. 따라서 두 번째 단계에서 맞통풍 유도를 목표로 세 가지 구조 조합(Combo)에 대한 시뮬레이션을 실행하였습니다.
+                        <h3 class="font-bold text-xl text-black mb-4 tracking-tight">맞통풍 구조 시뮬레이션 및 실증 반전 현상 (The Paradox)</h3>
+                        <p class="text-zinc-600 text-sm sm:text-base leading-relaxed break-keep mb-5">
+                            Dead zone 환기 개선을 위해 <strong>맞통풍(Cross Ventilation)</strong> 유도를 목표로 세 가지 구조 조합(Combo)을 설계하여 시뮬레이션과 실제 모형 측정을 교차 검증하였습니다.
                         </p>
-
-                        <div class="border border-zinc-200 rounded-lg overflow-hidden bg-white">
-                            <table class="w-full text-left text-sm">
-                                <thead class="bg-zinc-100 border-b border-zinc-200 text-xs text-zinc-600">
-                                    <tr><th class="p-3">조합</th><th class="p-3 text-right">최고농도 (ppm)</th><th class="p-3 text-right">누적노출</th></tr>
-                                </thead>
-                                <tbody class="divide-y divide-zinc-200">
-                                    <tr><td class="p-3 font-bold text-zinc-600">기준</td><td class="p-3 text-right">3,168</td><td class="p-3 text-right">385,288</td></tr>
-                                    <tr class="bg-blue-50/50"><td class="p-3 font-bold text-blue-600">Combo 1</td><td class="p-3 text-right font-bold text-blue-600">1,770</td><td class="p-3 text-right font-bold text-blue-600">300,827</td></tr>
-                                    <tr><td class="p-3">Combo 2</td><td class="p-3 text-right">1,901</td><td class="p-3 text-right">331,549</td></tr>
-                                    <tr><td class="p-3">Combo 3</td><td class="p-3 text-right">1,873</td><td class="p-3 text-right">331,201</td></tr>
-                                </tbody>
-                            </table>
-                        </div>
-
-                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                            <div class="bg-white border border-zinc-200 p-2 rounded-lg text-center">
-                                <p class="text-[10px] font-bold text-zinc-500 mb-2">[왼쪽] Combo 1</p>
-                                <img src="스크린샷 2026-06-19 112747.png" class="w-full object-contain zoomable-img" onclick="openModal(this.src)">
-                            </div>
-                            <div class="bg-white border border-zinc-200 p-2 rounded-lg text-center">
-                                <p class="text-[10px] font-bold text-zinc-500 mb-2">[오른쪽] Combo 2</p>
-                                <img src="스크린샷 2026-06-19 112851.png" class="w-full object-contain zoomable-img" onclick="openModal(this.src)">
-                            </div>
-                            <div class="bg-white border border-zinc-200 p-2 rounded-lg text-center sm:col-span-3 md:col-span-1">
-                                <p class="text-[10px] font-bold text-zinc-500 mb-2">Combo 3</p>
-                                <img src="스크린샷 2026-06-19 112914.png" class="w-full object-contain zoomable-img" onclick="openModal(this.src)">
-                            </div>
-                        </div>
-
-                        <ul class="list-disc pl-5 space-y-2 text-sm text-zinc-700 break-keep">
-                            <li><strong>Combo 1:</strong> 27° 기준선의 벽과 창문을 동시에 개방하여 공기가 가로지르도록 유도.</li>
-                            <li><strong>Combo 2:</strong> 창문은 닫고 21° 안쪽에 유도벽을 세워 기류를 바깥쪽으로 유도.</li>
-                            <li><strong>Combo 3:</strong> 창문과 벽을 개방하며 21° 유도벽을 추가 결합.</li>
+                        <ul class="list-disc pl-5 space-y-3 text-sm sm:text-base text-zinc-700 break-keep mb-8">
+                            <li><strong class="text-black">시뮬레이션 결과:</strong> 27° 벽과 창문을 동시 개방한 <span class="font-bold text-blue-600">Combo 1</span>이 최고 농도 1,770ppm으로 가장 우수한 환기 성능을 보였습니다. 21° 유도벽을 설치한 구조(Combo 2, 3)는 오히려 배출 경로를 차단하는 것으로 계산되었습니다.</li>
+                            <li><strong class="text-rose-600">실증 테스트의 반전:</strong> 그러나 실제 모형 측정 결과, 시뮬레이션과는 정반대로 <span class="font-bold text-rose-600">Combo 3(맞통풍+유도벽)</span>이 882ppm으로 가장 빠른 환기 속도를 기록했습니다. 이는 실제 환경의 복잡한 난류가 유도벽을 만났을 때 더 효율적인 압력차를 형성함을 시사합니다.</li>
                         </ul>
-                        
-                        <p class="text-sm text-zinc-700 bg-zinc-100 p-4 rounded-lg break-keep">
-                            시뮬레이션 결과, 맞통풍만을 구현한 <strong>Combo 1</strong>이 가장 우수한 환기 성능을 보였습니다. 21° 유도벽이 포함된 Combo 2, 3은 배출 경로를 차단해 맞통풍 이점을 상쇄시키는 것으로 확인되었습니다.
-                        </p>
+                    </div>
+                    
+                    <div class="overflow-x-auto mb-8 border border-zinc-200 rounded-lg">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>구조 조합</th>
+                                    <th>최고농도 (ppm)</th>
+                                    <th>누적노출량</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="font-bold text-zinc-500">기존 구조 (Base)</td>
+                                    <td>3,168</td>
+                                    <td>385,288</td>
+                                </tr>
+                                <tr class="bg-blue-50/30">
+                                    <td class="font-bold text-blue-700">Combo 1 (시뮬레이션 우세)</td>
+                                    <td class="font-bold text-blue-700">1,770</td>
+                                    <td class="font-bold text-blue-700">300,827</td>
+                                </tr>
+                                <tr>
+                                    <td class="font-bold text-zinc-600">Combo 2</td>
+                                    <td>1,901</td>
+                                    <td>331,549</td>
+                                </tr>
+                                <tr class="bg-rose-50/30">
+                                    <td class="font-bold text-rose-700">Combo 3 (실제 실측 우세)</td>
+                                    <td class="font-bold text-rose-700">1,873</td>
+                                    <td class="font-bold text-rose-700">331,201</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
 
-                        <div class="pt-6 border-t-2 border-dashed border-zinc-300">
-                            <h4 class="font-bold text-lg text-rose-600 mb-4">실증 모형 테스트: 시뮬레이션 결과의 뒤바뀜</h4>
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 items-center">
-                                <div class="text-sm text-zinc-700 space-y-4 break-keep">
-                                    <p>마지막 단계에서 모형을 통해 실제 CO₂ 농도를 측정한 결과, <strong>시뮬레이션과는 정반대</strong>의 결과가 나타났습니다.</p>
-                                    <p>실제 테스트에서는 유도벽과 맞통풍을 모두 적용한 <strong>Combo 3이 가장 우수한 환기 성능</strong>을 보였습니다. 시뮬레이션에서의 우열(Combo 1 > 3 > 2)이 실제에서는 (Combo 3 > 1 > 2)로 뒤바뀐 것입니다.</p>
-                                    <p>Combo 3은 882ppm까지만 상승한 뒤 가장 빠르게 감소하여 <strong>372초 만에 초기 농도의 10% 수준</strong>으로 떨어졌습니다. 반면 Combo 1은 425초, Combo 2는 513초가 소요되었습니다.</p>
-                                </div>
-                                <div class="bg-white border border-zinc-200 p-2 rounded-lg text-center shadow-sm">
-                                    <p class="text-[10px] font-bold text-zinc-500 mb-2">실제 모형 CO₂ 농도 실측 데이터</p>
-                                    <img src="스크린샷 2026-06-19 112931.png" class="w-full object-contain zoomable-img mix-blend-multiply" onclick="openModal(this.src)">
-                                </div>
-                            </div>
-                        </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                        <figure class="bg-white p-2 border border-zinc-200 text-center rounded-lg shadow-sm">
+                            <img src="스크린샷 2026-06-19 112747.png" class="zoomable-img w-full h-auto object-contain" onclick="openModal(this.src)">
+                            <figcaption class="text-[10px] text-zinc-500 font-bold mt-3 uppercase tracking-wider">Combo 1 시뮬레이션</figcaption>
+                        </figure>
+                        <figure class="bg-white p-2 border border-zinc-200 text-center rounded-lg shadow-sm">
+                            <img src="스크린샷 2026-06-19 112851.png" class="zoomable-img w-full h-auto object-contain" onclick="openModal(this.src)">
+                            <figcaption class="text-[10px] text-zinc-500 font-bold mt-3 uppercase tracking-wider">Combo 2 시뮬레이션</figcaption>
+                        </figure>
+                        <figure class="bg-white p-2 border border-zinc-200 text-center rounded-lg shadow-sm">
+                            <img src="스크린샷 2026-06-19 112931.png" class="zoomable-img w-full h-auto object-contain mix-blend-multiply" onclick="openModal(this.src)">
+                            <figcaption class="text-[10px] text-rose-600 font-bold mt-3 uppercase tracking-wider">실측 농도 변화 (Combo 3)</figcaption>
+                        </figure>
                     </div>
                 </div>
             </div>
@@ -224,165 +220,34 @@
             <div class="grid-row">
                 <div class="grid-label">Theoretical Background</div>
                 <div class="grid-content">
-                    <p class="mb-4">섬유에 악취가 잔류하는 현상은 단순히 냄새 분자가 직물 표면에 묻는 물리적 오염을 넘어, 휘발성 유기화합물과 섬유 고분자 매트릭스 간에 발생하는 <strong>열역학적 평형 및 분자 간 상호작용</strong>의 결과입니다. 조리 과정에서 발생한 미세 유분 에어로졸은 비극성 악취 분자(단쇄지방산 등)를 운반하는 캐리어 역할을 합니다.</p>
+                    <p class="mb-4">섬유에 악취가 잔류하는 현상은 단순히 냄새 분자가 직물 표면에 묻는 물리적 오염을 넘어, 휘발성 유기화합물과 섬유 고분자 매트릭스 간에 발생하는 <strong>열역학적 평형 및 분자 간 상호작용</strong>의 결과입니다.</p>
                     <p>친수성인 면이나 레이온과 달리, 에스테르기를 지닌 <strong>폴리에스터(PET)</strong>는 강한 소수성을 띠어 비극성 유분 악취 분자와 <strong>강력한 반데르발스 힘</strong>을 형성합니다.</p>
                 </div>
             </div>
 
-            <div class="mb-6 group relative bg-zinc-50 border border-zinc-200 rounded-xl overflow-hidden transition-all duration-500 hover:bg-white hover:shadow-lg">
-                <div class="p-6 cursor-pointer flex justify-between items-center">
-                    <div>
-                        <h3 class="font-bold text-lg text-black">ⅰ) 섬유 재질에 따른 액체 침투 속도 비교 실험</h3>
-                        <p class="text-xs text-zinc-500 mt-1">이곳에 마우스를 올리면 상세 데이터가 펼쳐집니다.</p>
-                    </div>
-                    <div class="text-zinc-400 group-hover:text-black transition-colors">
-                        <svg class="w-6 h-6 transform group-hover:rotate-180 transition-transform duration-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                    </div>
+            <div class="mb-16">
+                <h4 class="font-bold text-lg mb-6 border-l-4 border-black pl-3 tracking-tight">ⅰ) 섬유 재질에 따른 액체 침투 속도 비교 실험</h4>
+                <div class="bg-white p-2 border border-zinc-200 mb-6 rounded-lg shadow-sm">
+                    <img src="스크린샷 2026-06-19 115356.png" class="zoomable-img w-full h-auto object-contain" onclick="openModal(this.src)">
+                    <p class="text-[10px] text-center text-zinc-500 mt-2 font-bold uppercase tracking-widest">액체 침투 속도 비교 원본 데이터</p>
                 </div>
-                
-                <div class="max-h-0 opacity-0 group-hover:max-h-[1000px] group-hover:opacity-100 transition-all duration-700 ease-in-out">
-                    <div class="p-6 border-t border-zinc-200 space-y-6">
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                            <div class="bg-white border border-zinc-200 rounded-lg overflow-hidden">
-                                <table class="w-full text-center text-sm">
-                                    <thead class="bg-zinc-100 border-b border-zinc-200 text-xs text-zinc-600">
-                                        <tr><th class="p-3">재질</th><th class="p-3 border-l border-zinc-200">증류수 (극성)</th><th class="p-3 border-l border-zinc-200">올레산 (비극성)</th></tr>
-                                    </thead>
-                                    <tbody class="divide-y divide-zinc-200">
-                                        <tr><td class="p-3 font-medium text-zinc-700">레이온 25% 혼방-1</td><td class="p-3 border-l border-zinc-200">48.2 s</td><td class="p-3 border-l border-zinc-200">108.0 s</td></tr>
-                                        <tr><td class="p-3 font-medium text-zinc-700">레이온 25% 혼방-2</td><td class="p-3 border-l border-zinc-200">71.0 s</td><td class="p-3 border-l border-zinc-200">106.0 s</td></tr>
-                                        <tr class="bg-zinc-50"><td class="p-3 font-bold text-black">레이온 혼방 (평균)</td><td class="p-3 border-l border-zinc-200 font-bold">59.6 s</td><td class="p-3 border-l border-zinc-200">107.0 s</td></tr>
-                                        <tr class="border-t-2 border-zinc-200"><td class="p-3 font-medium text-zinc-700">폴리에스터 100%-1</td><td class="p-3 border-l border-zinc-200">80.0 s</td><td class="p-3 border-l border-zinc-200">24.54 s</td></tr>
-                                        <tr><td class="p-3 font-medium text-zinc-700">폴리에스터 100%-2</td><td class="p-3 border-l border-zinc-200">79.0 s</td><td class="p-3 border-l border-zinc-200">28.94 s</td></tr>
-                                        <tr class="bg-zinc-50"><td class="p-3 font-bold text-black">폴리에스터 (평균)</td><td class="p-3 border-l border-zinc-200">79.5 s</td><td class="p-3 border-l border-zinc-200 font-bold text-rose-600">26.74 s</td></tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <div class="bg-white border border-zinc-200 p-2 rounded-lg text-center shadow-sm">
-                                <img src="스크린샷 2026-06-19 115328.png" class="w-full h-auto object-contain zoomable-img" onclick="openModal(this.src)">
-                                <p class="text-[10px] font-bold text-zinc-500 mt-2">적하 반응 속도 실험</p>
-                            </div>
-                        </div>
-                        <p class="text-sm text-zinc-700 break-keep">
-                            <strong>결과:</strong> 친수성 레이온 혼방은 극성인 물을 빨리 흡수하지만, 소수성 폴리에스터는 <strong>기름(올레산)을 물보다 약 3배 이상, 레이온보다 4배 빠르게 흡수</strong>하여 분자 간 유사성 법칙을 명확히 증명했습니다.
-                        </p>
-                    </div>
-                </div>
+                <p class="text-sm text-zinc-700 leading-relaxed break-keep">
+                    <strong>결과 분석:</strong> 친수성 레이온 대비 소수성 폴리에스터는 기름 성분인 올레산을 약 <strong>3배 이상 빠르게 흡수</strong>하여 화학적 유사성 법칙(Like dissolves like)을 명확히 증명하였습니다.
+                </p>
             </div>
 
-            <div class="mb-6 group relative bg-zinc-50 border border-zinc-200 rounded-xl overflow-hidden transition-all duration-500 hover:bg-white hover:shadow-lg">
-                <div class="p-6 cursor-pointer flex justify-between items-center">
-                    <div>
-                        <h3 class="font-bold text-lg text-black">ⅱ) 섬유 재질에 따른 악취 물질의 정량적 흡착 및 용출 분석</h3>
-                        <p class="text-xs text-zinc-500 mt-1">이곳에 마우스를 올리면 원본 표 데이터와 실험 사진이 펼쳐집니다.</p>
-                    </div>
-                    <div class="text-zinc-400 group-hover:text-black transition-colors">
-                        <svg class="w-6 h-6 transform group-hover:rotate-180 transition-transform duration-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                    </div>
+            <div class="mb-16">
+                <h4 class="font-bold text-lg mb-6 border-l-4 border-black pl-3 tracking-tight">ⅱ) 섬유 재질에 따른 악취 물질의 정량적 흡착 및 용출 분석</h4>
+                <div class="bg-white p-2 border border-zinc-200 mb-6 rounded-lg shadow-sm">
+                    <img src="스크린샷 2026-06-19 115328.png" class="zoomable-img w-full h-auto object-contain" onclick="openModal(this.src)">
+                    <p class="text-[10px] text-center text-zinc-500 mt-2 font-bold uppercase tracking-widest">악취 물질 정량적 용출 분석 원본 데이터</p>
                 </div>
-                
-                <div class="max-h-0 opacity-0 group-hover:max-h-[2000px] group-hover:opacity-100 transition-all duration-700 ease-in-out">
-                    <div class="p-6 border-t border-zinc-200 space-y-6">
-                        <p class="text-sm text-zinc-700 break-keep">
-                            올레산 희석액에 원단을 20분간 침지시켜 초기 흡착량(W₁-W₀)을 측정하고, 에탄올 세척 후 최종 잔류량(W₂-W₀) 및 용출량(W₁-W₂)을 도출하여 정량 분석을 진행했습니다.
-                        </p>
-                        
-                        <div class="bg-white border border-zinc-200 p-2 rounded-lg text-center mb-6">
-                            <img src="스크린샷 2026-06-19 115356.png" class="w-full h-auto object-contain zoomable-img" onclick="openModal(this.src)">
-                            <p class="text-[10px] font-bold text-zinc-500 mt-2">원본 정량 데이터 및 교반 세척 실험</p>
-                        </div>
-                        
-                        <div class="bg-white border border-zinc-200 rounded-lg overflow-hidden overflow-x-auto">
-                            <table class="w-full text-center text-sm whitespace-nowrap">
-                                <thead class="bg-zinc-100 border-b border-zinc-200 text-xs text-zinc-600">
-                                    <tr>
-                                        <th class="p-3">시료명</th>
-                                        <th class="p-3 border-l border-zinc-200">초기(W₀)</th>
-                                        <th class="p-3 border-l border-zinc-200">흡착후(W₁)</th>
-                                        <th class="p-3 border-l border-zinc-200">흡착량</th>
-                                        <th class="p-3 border-l border-zinc-200">세척후(W₂)</th>
-                                        <th class="p-3 border-l border-zinc-200">용출량</th>
-                                    </tr>
-                                </thead>
-                                <tbody class="divide-y divide-zinc-200">
-                                    <tr>
-                                        <td class="p-3 text-zinc-700">폴리에스터 100% -1</td>
-                                        <td class="p-3 border-l border-zinc-200">0.44 g</td>
-                                        <td class="p-3 border-l border-zinc-200">0.82 g</td>
-                                        <td class="p-3 border-l border-zinc-200 font-bold text-rose-600">0.38 g</td>
-                                        <td class="p-3 border-l border-zinc-200">0.52 g</td>
-                                        <td class="p-3 border-l border-zinc-200 font-bold text-blue-600">0.30 g</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="p-3 text-zinc-700">폴리에스터 100% -2</td>
-                                        <td class="p-3 border-l border-zinc-200">0.39 g</td>
-                                        <td class="p-3 border-l border-zinc-200">0.75 g</td>
-                                        <td class="p-3 border-l border-zinc-200 font-bold text-rose-600">0.36 g</td>
-                                        <td class="p-3 border-l border-zinc-200">0.46 g</td>
-                                        <td class="p-3 border-l border-zinc-200 font-bold text-blue-600">0.29 g</td>
-                                    </tr>
-                                    <tr class="bg-zinc-50">
-                                        <td class="p-3 font-bold text-black">폴리에스터 100% (평균)</td>
-                                        <td class="p-3 border-l border-zinc-200 font-bold">0.415 g</td>
-                                        <td class="p-3 border-l border-zinc-200 font-bold">0.785 g</td>
-                                        <td class="p-3 border-l border-zinc-200 font-bold text-rose-600">0.37 g</td>
-                                        <td class="p-3 border-l border-zinc-200 font-bold">0.49 g</td>
-                                        <td class="p-3 border-l border-zinc-200 font-bold text-blue-600">0.295 g</td>
-                                    </tr>
-                                    <tr class="border-t-2 border-zinc-200">
-                                        <td class="p-3 text-zinc-700">레이온 25% 혼방 -1</td>
-                                        <td class="p-3 border-l border-zinc-200">0.48 g</td>
-                                        <td class="p-3 border-l border-zinc-200">0.62 g</td>
-                                        <td class="p-3 border-l border-zinc-200 font-bold text-rose-600">0.14 g</td>
-                                        <td class="p-3 border-l border-zinc-200">0.51 g</td>
-                                        <td class="p-3 border-l border-zinc-200 font-bold text-blue-600">0.11 g</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="p-3 text-zinc-700">레이온 25% 혼방 -2</td>
-                                        <td class="p-3 border-l border-zinc-200">0.65 g</td>
-                                        <td class="p-3 border-l border-zinc-200">0.89 g</td>
-                                        <td class="p-3 border-l border-zinc-200 font-bold text-rose-600">0.24 g</td>
-                                        <td class="p-3 border-l border-zinc-200">0.67 g</td>
-                                        <td class="p-3 border-l border-zinc-200 font-bold text-blue-600">0.22 g</td>
-                                    </tr>
-                                    <tr class="bg-zinc-50">
-                                        <td class="p-3 font-bold text-black">레이온 25% 혼방 (평균)</td>
-                                        <td class="p-3 border-l border-zinc-200 font-bold">0.565 g</td>
-                                        <td class="p-3 border-l border-zinc-200 font-bold">0.755 g</td>
-                                        <td class="p-3 border-l border-zinc-200 font-bold text-rose-600">0.19 g</td>
-                                        <td class="p-3 border-l border-zinc-200 font-bold">0.59 g</td>
-                                        <td class="p-3 border-l border-zinc-200 font-bold text-blue-600">0.165 g</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-
-                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-4">
-                            <div class="bg-white border border-zinc-200 p-4 rounded-lg text-center">
-                                <p class="text-[10px] font-bold text-rose-500 uppercase tracking-widest">Avg. Adsorption</p>
-                                <p class="text-3xl font-black text-black my-2">89.16%</p>
-                                <p class="text-xs text-zinc-500">폴리 평균 흡착률</p>
-                            </div>
-                            <div class="bg-white border border-zinc-200 p-4 rounded-lg text-center">
-                                <p class="text-[10px] font-bold text-blue-500 uppercase tracking-widest">Elution Efficiency</p>
-                                <p class="text-3xl font-black text-black my-2">86.84%</p>
-                                <p class="text-xs text-zinc-500">레이온 세척 효율</p>
-                            </div>
-                            <div class="bg-white border border-zinc-200 p-4 rounded-lg text-center">
-                                <p class="text-[10px] font-bold text-zinc-500 uppercase tracking-widest">Final Retention</p>
-                                <p class="text-3xl font-black text-rose-600 my-2">20.27%</p>
-                                <p class="text-xs text-zinc-500">폴리 최종 잔류율</p>
-                            </div>
-                        </div>
-
-                        <p class="text-sm text-zinc-700 break-keep">
-                            <strong>분석:</strong> 100% 폴리에스터는 89.16%라는 막대한 양의 비극성 물질을 흡착하며, 치밀한 결정 구조로 인해 세척제 침투가 어려워 가장 높은 20.27%의 최종 잔류율을 보입니다. 반면 레이온은 친수성이 강해 흡착량(33.63%) 자체가 낮으며 세척도 훨씬 수월합니다.
-                        </p>
-                    </div>
-                </div>
+                <p class="text-sm text-zinc-700 leading-relaxed break-keep">
+                    <strong>결과 분석:</strong> 100% 폴리에스터는 면이나 레이온에 비해 압도적으로 많은 양의 비극성 물질을 흡착하며, 치밀한 결정 구조로 인해 내부 침투 후 세척 효율이 떨어져 가장 높은 잔류율을 보입니다.
+                </p>
             </div>
 
-            <div class="grid-row border-none pb-0 mb-0 mt-16">
+            <div class="grid-row border-none pb-0 mb-0 mt-16 border-t border-zinc-200 pt-8">
                 <div class="grid-label text-rose-600">The Paradox</div>
                 <div class="grid-content space-y-6">
                     <h3 class="font-bold text-xl text-black">설문조사의 역설: "교복이 체육복보다 냄새가 잘 밴다?"</h3>
@@ -392,16 +257,16 @@
                     <div class="bg-rose-50 p-5 rounded-lg border border-rose-100">
                         <p class="font-bold text-rose-900 text-sm mb-2">원인 규명</p>
                         <p class="text-sm text-rose-800 break-keep">
-                            학생들은 '교복'을 셔츠가 아닌 가디건이나 자켓으로 인식했습니다. 가디건(아크릴 50%)과 자켓(폴리 40%)은 소수성 합성섬유를 포함하면서, 동시에 <strong>직물이 두껍고 표면적이 매우 넓어</strong> 물리적으로 포집하는 악취 에어로졸 절대량이 얇은 체육복을 압도하기 때문입니다.
+                            학생들은 '교복'을 셔츠가 아닌 가디건이나 자켓으로 인식했습니다. 가디건(아크릴 50%)과 자켓(폴리 40%)은 소수성 합성섬유를 포함하면서, 동시에 <strong>직물이 두껍고 표면적이 매우 넓어</strong> 물리적으로 포집하는 악취 에어로졸의 절대량이 얇은 체육복을 압도하기 때문입니다.
                         </p>
                     </div>
                     <div class="grid grid-cols-2 gap-6">
-                        <div class="border border-zinc-200 bg-white p-2 rounded-lg text-center">
-                            <img src="cardigan-tag.png" alt="교복 가디건" class="w-full object-contain zoomable-img" onclick="openModal(this.src)">
+                        <div class="border border-zinc-200 bg-white p-2 rounded-lg text-center shadow-sm">
+                            <img src="cardigan-tag.png" alt="교복 가디건" class="w-full h-32 object-contain zoomable-img" onclick="openModal(this.src)">
                             <p class="text-[10px] text-zinc-500 font-bold mt-2 uppercase tracking-wider">가디건 섬유 조성</p>
                         </div>
-                        <div class="border border-zinc-200 bg-white p-2 rounded-lg text-center">
-                            <img src="jacket-tag.png" alt="교복 자켓" class="w-full object-contain zoomable-img" onclick="openModal(this.src)">
+                        <div class="border border-zinc-200 bg-white p-2 rounded-lg text-center shadow-sm">
+                            <img src="jacket-tag.png" alt="교복 자켓" class="w-full h-32 object-contain zoomable-img" onclick="openModal(this.src)">
                             <p class="text-[10px] text-zinc-500 font-bold mt-2 uppercase tracking-wider">자켓 섬유 조성</p>
                         </div>
                     </div>
@@ -526,19 +391,19 @@
                 <div class="space-y-2">
                     <label class="block text-xs font-bold text-zinc-800 uppercase tracking-wider font-mono">1. Detection Type</label>
                     <select id="qsiOdor" class="w-full p-3 bg-zinc-50 border border-zinc-200 rounded-lg focus:outline-none focus:border-black text-sm appearance-none cursor-pointer">
-                        <option value="1">시큼한 쉰내</option>
-                        <option value="2">암내</option>
-                        <option value="3">황변 꿉꿉함</option>
-                        <option value="4" selected>급식실 잔류 취기</option>
+                        <option value="1">시큼한 쉰내 (포도상구균 대사 땀 냄새)</option>
+                        <option value="2">암내 (코리네박테리움 피지 분해 취)</option>
+                        <option value="3">황변 꿉꿉함 (미크로코쿠스 유래)</option>
+                        <option value="4" selected>급식실 잔류 취기 (슈도모나스균 유래 음식물 바이오필름 향)</option>
                     </select>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
                     <div class="space-y-2">
                         <label class="block text-xs font-bold text-zinc-800 uppercase tracking-wider font-mono">2. Perceptual Level</label>
                         <select id="qsiSeverity" class="w-full p-3 bg-zinc-50 border border-zinc-200 rounded-lg focus:outline-none focus:border-black text-sm appearance-none cursor-pointer">
-                            <option value="1">Level 1</option>
-                            <option value="2" selected>Level 2</option>
-                            <option value="3">Level 3</option>
+                            <option value="1">Level 1: Detection Threshold (가까이서 감지)</option>
+                            <option value="2" selected>Level 2: Recognition (활동 반경 내 인지)</option>
+                            <option value="3">Level 3: Saturation (주변으로 악취 비산)</option>
                         </select>
                     </div>
                     <div class="space-y-2">
@@ -554,8 +419,8 @@
                 <div class="space-y-2">
                     <label class="block text-xs font-bold text-zinc-800 uppercase tracking-wider font-mono">4. Skin Sensitivity</label>
                     <select id="qsiSkinType" class="w-full p-3 bg-zinc-50 border border-zinc-200 rounded-lg focus:outline-none focus:border-black text-sm appearance-none cursor-pointer">
-                        <option value="normal">Normal</option>
-                        <option value="sensitive">Sensitive</option>
+                        <option value="normal">Normal (에탄올 기반)</option>
+                        <option value="sensitive">Sensitive (수성 기반)</option>
                     </select>
                 </div>
             </div>
@@ -569,6 +434,16 @@
                 <h3 class="text-sm font-bold tracking-widest text-black uppercase">Formula Prescription</h3>
                 <div id="qsiBadge"></div>
             </div>
+            
+            <div class="space-y-4 text-sm bg-zinc-50 border border-zinc-200 rounded-lg p-6">
+                <div><span class="text-zinc-500 w-32 inline-block font-semibold">Target Factor:</span> <strong id="out-bacteria"></strong></div>
+                <div><span class="text-zinc-500 w-32 inline-block font-semibold">Matching QSI:</span> <strong id="out-qsi" class="text-lg font-extrabold text-black"></strong></div>
+                <div class="pt-4 mt-4 border-t border-zinc-200">
+                    <p class="text-[11px] font-bold text-zinc-400 uppercase tracking-wider mb-2 font-mono">Mechanism of Action</p>
+                    <p id="out-principle" class="text-zinc-700 leading-relaxed font-medium break-keep"></p>
+                </div>
+            </div>
+
             <div class="border border-zinc-200 rounded-lg overflow-hidden">
                 <table class="w-full text-left text-sm border-collapse">
                     <thead class="bg-zinc-100 border-b border-zinc-200 text-[10px] uppercase tracking-wider text-zinc-500 font-mono">
@@ -587,6 +462,7 @@
     </main>
 
     <script>
+        // Core View Controllers & Modal
         function reveal() {
             var reveals = document.querySelectorAll(".reveal");
             for (var i = 0; i < reveals.length; i++) {
@@ -638,6 +514,7 @@
             setTimeout(() => { modal.classList.add('hidden'); }, 300);
         }
 
+        // HAFS Menu Database & 진단 로직
         const hafsMenuDB = {
             "0601": { dateLabel: "6월 1일 (월)", breakfast: "쌀밥, 맑은오징어국, 돈사태묵은지찜, 마늘햄구이, 건세멸치조림, 석박지", lunch: "수제치킨마요덮밥, 미역장국, 치즈스테이크볼꼬지, 쫄뱅이, 단무지무침, 포기김치", dinner: "설렁탕, 쌀밥/ 잡곡밥, 돈육김치볶음, 온두부, 메추리알곤약조림, 콩나물무침, 깍두기", snack: "탱글뽀득감자핫도그, 엔요" },
             "0602": { dateLabel: "6월 2일 (화)", breakfast: "쌀밥, 열무된장국, 닭볶음탕, 파프리카맛살조림, 참나물생채, 포기김치", lunch: "쌀밥, 김치찌개, 언양식불고기, 해물파전, 미니새송이볶음, 치커리생채, 깍두기", dinner: "쌀밥/ 잡곡밥, 대파육개장, 가자미오븐구이, 납작만두&비빔채소, 감자채볶음, 부추양파무침, 포기김치", snack: "뿌링클치킨너겟, 레몬에이드" },
@@ -683,36 +560,12 @@
                 content.innerHTML = `
                     ${finalHeaderHtml}
                     <p class="text-black font-extrabold border-l-4 border-black pl-3 mb-5">고농도 지용성 메뉴(<span class="text-zinc-500">${detectedWords.join(', ')}</span>) 감지. 섬유 고착화 극위험.</p>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-6">
-                        <div class="p-4 border border-rose-200 bg-rose-50 rounded-lg">
-                            <p class="text-[10px] font-bold text-rose-600 uppercase tracking-widest mb-1">Strict Prohibition</p>
-                            <p class="font-bold text-rose-900 text-[13px] break-keep">체육복 / 아우터 절대 착용 금지</p>
-                            <p class="text-xs text-rose-700 mt-2 break-keep">해당 메뉴 비산 시 폴리에스터(100%) 섬유의 소수성 인력에 의해 잔류 취기가 강력하게 고착됩니다. 식사 전 반드시 탈의하십시오.</p>
-                        </div>
-                        <div class="p-4 border border-emerald-200 bg-emerald-50 rounded-lg">
-                            <p class="text-[10px] font-bold text-emerald-600 uppercase tracking-widest mb-1">Recommendation</p>
-                            <p class="font-bold text-emerald-900 text-[13px] break-keep">교복 셔츠 단독 착용</p>
-                            <p class="text-xs text-emerald-700 mt-2 break-keep">그나마 친수성(Rayon 25%)을 띠는 셔츠가 반데르발스 인력 형성을 최소화합니다.</p>
-                        </div>
-                    </div>
                 `;
             } else if (riskLevel === 1) {
                 badge.innerHTML = `<span class="bg-amber-100 text-amber-900 border border-amber-300 px-2 py-1 font-mono font-bold rounded text-[10px]">CAUTION</span>`;
                 content.innerHTML = `
                     ${finalHeaderHtml}
                     <p class="text-black font-extrabold border-l-4 border-amber-400 pl-3 mb-5">일반 지용성 메뉴(<span class="text-zinc-500">${detectedWords.join(', ')}</span>) 감지. 부분적 섬유 흡착 주의.</p>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-6">
-                        <div class="p-4 border border-zinc-200 bg-white rounded-lg">
-                            <p class="text-[10px] font-bold text-zinc-500 uppercase tracking-widest mb-1">Caution</p>
-                            <p class="font-bold text-zinc-900 text-[13px] break-keep">교복 자켓 및 가디건 주의</p>
-                            <p class="text-xs text-zinc-600 mt-2 break-keep">울(Wool)이 섞인 다공성 구조이므로 구이나 볶음 등 일반 악취가 오래 머물 수 있습니다.</p>
-                        </div>
-                        <div class="p-4 border border-emerald-200 bg-emerald-50 rounded-lg">
-                            <p class="text-[10px] font-bold text-emerald-600 uppercase tracking-widest mb-1">Recommendation</p>
-                            <p class="font-bold text-emerald-900 text-[13px] break-keep">교복 셔츠 위주 착용</p>
-                            <p class="text-xs text-emerald-700 mt-2 break-keep">체육복 착용 시 냄새가 약간 밸 수 있으나 심각한 수준은 아니며, 가급적 셔츠를 권장합니다.</p>
-                        </div>
-                    </div>
                 `;
             } else {
                 badge.innerHTML = `<span class="bg-zinc-100 text-zinc-800 px-2 py-1 font-mono font-bold rounded text-[10px]">SAFE</span>`;
@@ -720,7 +573,6 @@
                     ${finalHeaderHtml}
                     <div class="p-5 bg-emerald-50 border border-emerald-200 rounded-xl">
                         <p class="font-bold text-emerald-900 mb-1">✔️ 쾌적한 상태 유지 가능</p>
-                        <p class="text-sm text-emerald-800 break-keep">해당 식단은 수용성 메뉴 위주로 구성되어 있어 소수성 섬유(폴리에스터)와의 고착화 위험이 낮습니다. 체육복을 포함한 모든 종류의 의류를 편하게 착용하셔도 무방합니다.</p>
                     </div>
                 `;
             }
@@ -728,10 +580,19 @@
         }
 
         // QSI Calculator Logic
+        const qsi_db = {
+            "1": { bacteria: "Staphylococcus", qsi: "Hamamelitannin", principle: "세균의 Agr 표적 시스템을 하향 조절하여, 땀 속 노폐물을 쉰내 물질로 전환하는 유전자 발현 신호 체계를 차단합니다." },
+            "2": { bacteria: "Corynebacterium", qsi: "Farnesol + Carvacrol", principle: "아포크린샘 피지 분해 효소 활성 신호를 교란하여, 액취증 유발 물질 생성을 근본적으로 봉쇄합니다." },
+            "3": { bacteria: "Micrococcus luteus", qsi: "Quercetin", principle: "휴면 상태의 균을 깨우는 RPF(휴면 타파 인자) 수용체를 억제하여 특유의 노란 색소 합성을 억제합니다." },
+            "4": { bacteria: "Pseudomonas aeruginosa", qsi: "Epigallocatechin Gallate (EGCG)", principle: "EGCG의 수산화기(-OH)가 LasR 수용체와 결합하여 입체 장애(Steric Hindrance)를 유발, 바이오필름을 억제합니다." }
+        };
+
         function calculateFormula() {
+            const odorChoice = document.getElementById("qsiOdor").value;
             const severity = parseInt(document.getElementById("qsiSeverity").value);
             const fabric = document.getElementById("qsiFabric").value;
             const skinType = document.getElementById("qsiSkinType").value;
+            const solution = qsi_db[odorChoice];
 
             const qsi_base_pct = 0.5 * severity;
             const neutralizer_pct = 1.2 * severity;
@@ -753,6 +614,9 @@
 
             const water_pct = 100.0 - (qsi_base_pct + neutralizer_pct + ethanol_pct + surfactant_pct);
 
+            document.getElementById("out-bacteria").innerText = solution.bacteria;
+            document.getElementById("out-qsi").innerText = solution.qsi;
+            document.getElementById("out-principle").innerText = solution.principle;
             document.getElementById("out-qsi-pct").innerText = qsi_base_pct.toFixed(1) + "%";
             document.getElementById("out-surfactant-pct").innerText = surfactant_pct.toFixed(1) + "%";
             document.getElementById("out-neutral-pct").innerText = neutralizer_pct.toFixed(1) + "%";
